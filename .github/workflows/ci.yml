@@ -8,26 +8,24 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Clonar repositório
+        uses: actions/checkout@v4
 
+      - name: 🟢 Instalar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
-steps:
-  - name: 📥 Clonar repositório
-    uses: actions/checkout@v4
+      - name: 📦 Instalar dependências
+        run: npm install
 
-  - name: 🟢 Instalar Node
-    uses: actions/setup-node@v4
-    with:
-      node-version: 18
+      - name: 🎭 Instalar Playwright
+        run: npx playwright install --with-deps
 
-  - name: 📦 Instalar dependências
-    run: npm install
+      - name: 🚀 Iniciar servidor
+        run: npx serve . -l 3000 &
 
-  - name: 🎭 Instalar Playwright
-    run: npx playwright install --with-deps
-
-  - name: 🚀 Iniciar servidor
-    run: npx serve . -l 3000 &
-
-  - name: 🧪 Rodar testes
-    run: npx playwright test
+      - name: 🧪 Rodar testes
+        run: npx playwright test
 
