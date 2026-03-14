@@ -9,7 +9,7 @@ jobs:
 test:
 runs-on: ubuntu-latest
 
-
+```
 steps:
   - name: 📥 Clonar repositório
     uses: actions/checkout@v4
@@ -30,4 +30,4 @@ steps:
 
   - name: 🧪 Rodar testes
     run: npx playwright test
-    
+```
