@@ -1,13 +1,13 @@
 name: Teste Pesquisa Simples
 
 on:
-push:
-branches: ["main"]
-pull_request:
+  push:
+    branches: ["main"]
+    pull_request:
 
 jobs:
-test:
-runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-latest
 
 
 steps:
