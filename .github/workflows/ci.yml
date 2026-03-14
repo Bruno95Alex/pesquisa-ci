@@ -52,9 +52,6 @@ jobs:
       - name: Instalar dependências do projeto
         run: npm install
 
-      - name: Instalar Playwright
-        run: npx playwright install --with-deps
-
       - name: Instalar servidor estático
         run: npm install -g serve
 
