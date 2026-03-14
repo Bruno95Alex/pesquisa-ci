@@ -1,0 +1,14 @@
+
+
+{
+"name": "pesquisa-ci",
+"version": "1.0.0",
+"scripts": {
+"start": "serve . -l 3000",
+"test": "playwright test"
+},
+"devDependencies": {
+"@playwright/test": "^1.43.0",
+"serve": "^14.0.0"
+}
+}
